@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Yasir - MWS 2018</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Mobile Web Specialist 2018">
+		<meta name="theme-color" content="#ffffff"/>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+
+		<link rel="shortcut icon" type="image/png" href="images/yasir-icon.png">
+		<link rel="manifest" href="manifest.json">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+
+			<div class="pala">
+				<a id="menu" class="header__menu">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+					</svg>
+				</a>
+				<img src="images/yasir.png" alt="logo yasir profile" > <br>
+				<i class="judul-pala">be - creative</i>
+			</div>
+
+			<div id="drawer" class="menu">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="project1">Add2Numbers</a></li>
+					<li class="menu__item"><a href="project2">Place Review</a></li>
+					<li class="menu__item"><a href="project3">Restaurant Review</a></li>
+				</ul>
+			</div>
+
+			<div class="sidebar">
+				<img class="photo-profile" src="images/yasir.jpg" alt="yasir profile mws 2018">
+			</div>
+
+			<div class="content">
+				<p>an application to add 2 numbers.</p>
+				<a href="project1" class="button">Add2Numbers</a>
+			</div>
+
+			<div class="content">
+				<p>How can I visit the Googleplex?</p>
+				<a href="project2" class="button">Place Review</a>
+			</div>
+
+			<div class="content">
+				<a href="project3" class="button">Restaurant Review</a>
+			</div>
+
+			<div class="footer">
+				<a href="#" target="_blank" rel="noreferrer" aria-label="My personal website">
+					Yasir Maulana
+				</a>
+				|
+				<a href="http://www.yasirjs.com" target="_blank" rel="noreferrer" aria-label="My personal website">
+					www.yasirjs.com
+				</a>
+				|
+				<a href="#" target="_blank" rel="noreferrer" aria-label="My personal website">
+					<!-- <script type="text/javascript">
+						window.open('mailto:yasir.maulana@gmail.com');
+					</script> -->
+					yasir.maulana@gmail.com
+				</a>
+				|
+				<a href="https://wa.me/628561333111?text=hi%20nama%20saya%20yasir" target="_blank" rel="noreferrer" aria-label="My personal website">
+					+62 815 8624 5143
+				</a>
+			</div>
+
+		</div>
+
+		<!-- <script type="application/javascript" src="main.js"></script> -->
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('sw.js', {scope:'./'})
+				.then(function(registration) {
+					console.log('Registration successful m');
+				})
+				.catch(function(error) {
+					console.log('Service worker registration failed, error:', error);
+				});
+			}
+		</script>
+
+		<script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.menu');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      // main.addEventListener('click', function() {
+      //   drawer.classList.remove('open');
+      // });
+    </script>
+
+	</body>
+</html>

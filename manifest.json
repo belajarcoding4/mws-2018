@@ -1,0 +1,16 @@
+{
+  "short_name": "ysr-mws",
+  "name": "ysr-mws",
+  "scope": "/",
+  "icons": [
+    {
+      "src":"images/yasir-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone"
+}
